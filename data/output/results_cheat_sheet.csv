@@ -1,0 +1,14 @@
+,0
+Queue_Peak_Backlog,44
+Queue_Mean_Backlog,11.460069444444445
+Queue_Max_Active_Staff,5
+Process_Happy_Path_Edge,App_Intake -> Credit_Check
+Process_Happy_Path_Count,100000
+Process_Exception_Edge,Underwriting -> VP_Approval
+Process_Exception_Count,1781
+Fidelity_ModelA_KS,0.3113765079143255
+Fidelity_ModelB_KS,0.14155087355073737
+Fidelity_Error_Reduction_Pct,97.5980367236792
+Sensitivity_MLE_Error,0.1415508735507373
+Sensitivity_Manual_Shift_Error,0.1149796261417996
+Sensitivity_Structural_Bias_Pct,23.10952670533864
