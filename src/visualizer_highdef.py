@@ -211,9 +211,8 @@ def plot_queue_dynamics(df):
     plt.close()
 
 def plot_process_map(df):
-    """Fig 5: Process Map"""
+    """Fig 5: Process Map (Discovered Flow)"""
     print("Generating Figure 5 (Process Map)...")
-    
     df = df.sort_values(by=['CaseID', 'Start_Time'])
     df['Next_Activity'] = df.groupby('CaseID')['Activity'].shift(-1)
     transitions = df.dropna(subset=['Next_Activity'])
@@ -249,12 +248,16 @@ def plot_process_map(df):
     pos = {}
     max_layer = max(layers.values())
     for layer, nodes in layer_groups.items():
-        x = 0.05 + (layer / max_layer) * 0.9 
+        # Center the nodes horizontally
+        x = 0.1 + (layer / max_layer) * 0.8 
         nodes.sort() 
         for i, node in enumerate(nodes):
-            pos[node] = (x, np.linspace(0.35, 0.65, len(nodes)+2)[1:-1][i])
+            # Center vertically (0.5 is middle)
+            pos[node] = (x, np.linspace(0.4, 0.6, len(nodes)+2)[1:-1][i])
 
-    plt.figure(figsize=(12, 4)) 
+    # 1. Figure Dimensions: Make it wide and not too tall
+    plt.figure(figsize=(12, 5)) 
+    
     nx.draw_networkx_nodes(G, pos, node_size=6000, node_color='#ECF0F1', edgecolors='#2C3E50', linewidths=2)
     
     weights = [G[u][v]['weight'] for u,v in G.edges()]
@@ -265,8 +268,15 @@ def plot_process_map(df):
     edge_labels = { (u,v): f"{d['weight']}" for u,v,d in G.edges(data=True) if d['weight'] > max(weights)*0.05 }
     nx.draw_networkx_edge_labels(G, pos, edge_labels=edge_labels, font_size=10, bbox=dict(alpha=1.0, edgecolor='white', facecolor='white'))
     
-    plt.title("Discovered Process Flow: The 'Happy Path' and Exceptions", fontsize=14, y=0.90)
+    # 2. FIXED TITLE: Use y=0.85 to place it safely inside the plot area but above nodes
+    plt.title("Discovered Process Flow: The 'Happy Path' and Exceptions", fontsize=14, y=0.85)
+    
+    # 3. FIXED MARGINS: Expand limits to (0, 1) so nodes (at 0.5) don't get cut off
+    plt.ylim(0, 1) 
     plt.axis('off')
+    
+    # 4. Final layout tweak to ensure no clipping
+    plt.subplots_adjust(top=0.9, bottom=0.1, left=0.05, right=0.95)
     
     save_ijds_fig(FIG_DIR / 'fig5_process_map')
     plt.close()
