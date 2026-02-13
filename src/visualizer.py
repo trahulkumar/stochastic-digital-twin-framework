@@ -81,7 +81,7 @@ def plot_fidelity_comparison(data):
     plt.legend()
     plt.xlabel('Cycle Time (Minutes)')
     plt.ylabel('Probability Density')
-    plt.title('Fig 3a: Overall Distribution Fit (Macro View)')
+    plt.title('Overall Distribution Fit (Macro View)')
     
     save_ijds_fig(FIG_DIR / 'fig3a_full_distribution')
     plt.close()
@@ -102,7 +102,7 @@ def plot_fidelity_comparison(data):
     plt.legend(loc='upper right')
     plt.xlabel('Cycle Time (Minutes)')
     plt.ylabel('Probability Density')
-    plt.title('Fig 3b: Tail Behavior Detail (Micro View)')
+    plt.title('Tail Behavior Detail (Micro View)')
     
     save_ijds_fig(FIG_DIR / 'fig3b_tail_detail')
     plt.close()
@@ -155,7 +155,7 @@ def plot_bimodal_evidence(data):
     plt.ylim(0, 0.025)
     plt.xlabel('Processing Time (Minutes)')
     plt.ylabel('Density Probability')
-    plt.title('Fig 1a: Empirical Data Distribution (Macro View)')
+    plt.title('Empirical Data Distribution (Macro View)')
     plt.legend(loc='upper right')
     
     save_ijds_fig(FIG_DIR / 'fig1a_bimodal_macro')
@@ -174,7 +174,7 @@ def plot_bimodal_evidence(data):
     
     plt.xlabel('Processing Time (Minutes)')
     plt.ylabel('Density Probability')
-    plt.title('Fig 1b: Tail Behavior Evidence (Micro View)')
+    plt.title('Tail Behavior Evidence (Micro View)')
     plt.legend(loc='upper right')
     
     save_ijds_fig(FIG_DIR / 'fig1b_bimodal_micro')
