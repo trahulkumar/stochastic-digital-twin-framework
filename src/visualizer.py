@@ -16,8 +16,33 @@ FIG_DIR.mkdir(parents=True, exist_ok=True)
 
 # Set Style
 sns.set_context("paper")
-sns.set_style("whitegrid")
-plt.rcParams['font.family'] = 'serif'
+# sns.set_style("whitegrid")
+# plt.rcParams['font.family'] = 'serif'
+
+# Set Typography: Use Serif to match tgtermes/Times New Roman
+plt.rcParams.update({
+    "font.family": "serif",
+    "font.serif": ["Times New Roman", "DejaVu Serif", "serif"],
+    "mathtext.fontset": "stix", # Matches LaTeX math style
+    "axes.titlesize": 12,
+    "axes.labelsize": 11,
+    "legend.fontsize": 10,
+    "xtick.labelsize": 10,
+    "ytick.labelsize": 10
+})
+
+sns.set_context("paper")
+sns.set_style("ticks") # Cleaner style for top-tier journals
+
+def save_ijds_fig(path_base):
+    """Saves figure in all required IJDS formats: PNG, PDF, and EPS"""
+    # 1. High-res PNG for quick review
+    plt.savefig(f"{path_base}.png", dpi=300, bbox_inches='tight')
+    # 2. PDF for final publication (Vector)
+    plt.savefig(f"{path_base}.pdf", format='pdf', bbox_inches='tight')
+    # 3. EPS for legacy typesetting (Vector)
+    plt.savefig(f"{path_base}.eps", format='eps', bbox_inches='tight')
+    print(f"Saved vector formats for {path_base}")
 
 def plot_fidelity_comparison(data):
     """Fig 1: Generates TWO panels (1a Full, 1b Tail) for side-by-side layout"""
