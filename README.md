@@ -60,9 +60,9 @@ python src/visualizer.py
 
 | Manuscript Ref | Description | Output Filename |
 | --- | --- | --- |
-| **Figure 1** | Empirical Bimodality Evidence (Macro/Micro) | `fig1_empirical_evidence.pdf` |
+| **Figure 1** | Empirical Bimodality Evidence (Macro/Micro) | `fig1a_bimodal_macro.pdf`, `fig1b_bimodal_micro.pdf` |
 | **Figure 2** | Discovered Process Flow (Process Map) | `fig2_process_map.pdf` |
-| **Figure 3** | Fidelity Comparison (Goodness-of-fit) | `fig3_fidelity_comparison.pdf` |
+| **Figure 3** | Fidelity Comparison (Goodness-of-fit) | `fig3a_full_distribution.pdf`, `fig3b_tail_detail.pdf` |
 | **Figure 4** | Sensitivity Analysis (Structural Bias) | `fig4_sensitivity_analysis.pdf` |
 | **Figure 5** | Resource Contention (Queue Dynamics) | `fig5_queue_dynamics.pdf` |
 
