@@ -1,10 +1,25 @@
-# Python-generated files
+# LaTeX temporary files
+*.aux
+*.log
+*.out
+*.toc
+*.pdf
+*.gz
+*.fdb_latexmk
+*.fls
+
+# Python/System
 __pycache__/
+.venv/
+.DS_Store
+
+# Data (Ignore raw logs, keep the outputs we want to share)
+data/raw/*.csv
+!data/raw/synthetic_sample.csv
+
+# Standard Python-generated files
 *.py[oc]
 build/
 dist/
 wheels/
 *.egg-info
-
-# Virtual environments
-.venv
