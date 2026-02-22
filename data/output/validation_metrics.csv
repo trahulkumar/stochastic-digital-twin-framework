@@ -1,4 +1,4 @@
 Model,KS_Statistic,p_value,Parameters
-Model A (Normal),0.3113765079143255,0.0,"mu=85.99, std=117.54"
-Model B (Log-Normal),0.14155087355073737,0.0,"s=0.75, scale=58.04"
-Model C (Mixture),0.003390000000000004,0.6124224028088001,"w=[0.15 0.85], mu=[5.51 3.8 ]"
+Model A (Normal),0.3019557084962854,0.0,"mu=97.15, std=131.89"
+Model B (Log-Normal),0.14698382883542027,0.0,"s=0.81, scale=62.71"
+Model C (Mixture),0.002850000000000019,0.8103056660239198,"w=[0.81 0.19], mu=[3.8  5.53]"

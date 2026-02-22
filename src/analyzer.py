@@ -6,7 +6,7 @@ from pathlib import Path
 
 # --- CONFIGURATION ---
 BASE_DIR = Path(__file__).resolve().parent.parent
-INPUT_FILE = BASE_DIR / 'data' / 'raw' / 'financial_log_100k.csv'
+INPUT_FILE = BASE_DIR / 'data' / 'raw' / 'passive_log_100k.csv'
 OUTPUT_METRICS = BASE_DIR / 'data' / 'output' / 'validation_metrics.csv'
 OUTPUT_SENSITIVITY = BASE_DIR / 'data' / 'output' / 'sensitivity_analysis.csv'
 
