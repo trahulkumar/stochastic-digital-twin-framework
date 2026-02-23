@@ -1,4 +1,6 @@
-Model,KS_Statistic,p_value,Parameters
-Model A (Normal),0.3019557084962854,0.0,"mu=97.15, std=131.89"
-Model B (Log-Normal),0.14698382883542027,0.0,"s=0.81, scale=62.71"
-Model C (Mixture),0.002850000000000019,0.8103056660239198,"w=[0.81 0.19], mu=[3.8  5.53]"
+model_id,model_name,family,ks_stat,p_value,test_type,scale,train_n,test_n,params_json,notes
+M1,Normal,Unimodal,0.3075571331338387,0.0,one-sample,raw,70000,30000,"{""mu"": 104.20650213989559, ""std"": 147.0318124746541}",Baseline
+M2,LogNormal,Unimodal,0.14980614748945842,0.0,one-sample,raw,70000,30000,"{""shape"": 0.8320794893213964, ""loc"": 0.0, ""scale"": 65.66991618466992}",Common service-time baseline
+M3,Gamma,Unimodal,0.2252447084827754,0.0,one-sample,raw,70000,30000,"{""shape"": 1.2226351051160078, ""loc"": 0.0, ""scale"": 85.2310731990704}",Alternative service-time baseline
+M4,EmpiricalResample,NonParametric,0.007366666666666674,0.38779731193682854,two-sample,raw,70000,30000,{},Bootstrap resampling from train
+M5,GMM(K=2),Mixture,0.0038000000000000256,0.9813504313614791,two-sample,log,70000,30000,"{""K"": 2, ""weights"": [0.8040886209321584, 0.19591137906784162], ""means"": [3.839600172453729, 5.6008084957236335], ""covariances"": [0.166757802179027, 0.355434699864164]}",BIC-selected mixture on log(service_time)
