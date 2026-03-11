@@ -1,4 +1,3 @@
-```markdown
 # Beyond the Average: Overcoming Fidelity Barriers in Stochastic Digital Twins for Financial Services Workflows
 
 [![Python](https://img.shields.io/badge/python-3.10%2B-blue.svg)](https://www.python.org/)
@@ -115,7 +114,5 @@ All figures referenced in the manuscript are generated locally by the suite and 
 If you use this code, the synthetic generator, or the RADR methodology in your research, please cite the accompanying paper:
 
 > Thatikonda, R. K., & Donepudi, S. (2026). Beyond the Average: Overcoming Fidelity Barriers in Stochastic Digital Twins for Financial Services Workflows. *Digital Twin*. [Submitted / Under Review]
-
-```
 
 ```
