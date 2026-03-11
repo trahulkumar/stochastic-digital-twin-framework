@@ -126,6 +126,26 @@ uv run src/visualizer.py
 
 ---
 
+### 4. Empirical Validation (BPI Challenge 2017)
+
+Validates the GMM approach on a real-world dataset (BPI Challenge 2017) by extracting service times for specific activities (e.g., `W_Validate application`) andComparing GMM fidelity against unimodal baselines.
+
+**Key results:**
+* Demonstrates high-fidelity capture of bimodal "Routine" vs "Exception" modes.
+* Significant reduction in KS distance compared to unimodal LogNormal benchmarks.
+
+```bash
+uv run src/bpi_empirical_analysis.py
+```
+
+**Outputs**
+
+* `data/output/bpi_empirical_metrics.csv` (KS metrics and model parameters)
+* `figures/fig_empirical_bpi_macro.png` (Macro-level bimodality view)
+* `figures/fig_empirical_bpi_tail.png` (Micro-level exception tail zoom)
+
+---
+
 ## Manuscript Figures & Artifacts
 
 | Manuscript Ref | Description                                | Output Filename (saved as PDF + PNG)           |
@@ -137,6 +157,7 @@ uv run src/visualizer.py
 | **Figure 5**   | Resource Contention & Queue Build-Up       | `fig5_queue_dynamics`                          |
 | **Figure 6a**  | Underwriting Backlog (Passive vs RADR)     | `fig6a_underwriting_backlog_passive_vs_radr`   |
 | **Figure 6b**  | Underwriting WIP (Passive vs RADR)         | `fig6b_underwriting_wip_passive_vs_radr`       |
+| **Appendix Fig**| BPI Empirical Bimodality                   | `fig_empirical_bpi_macro`, `fig_empirical_bpi_tail` |
 
 ---
 
