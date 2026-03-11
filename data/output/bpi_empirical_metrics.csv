@@ -1,0 +1,2 @@
+dataset,activity,train_n,test_n,ks_lognormal,ks_gmm,error_reduction_pct,ln_params,gmm_params
+BPI_2017,W_Validate application,15308,6562,0.13468092271726495,0.05851874428527888,56.55008660125754,"{'shape': np.float64(1.6047493900143326), 'loc': 0, 'scale': np.float64(3549.078547240379)}","{'weights': [0.26089084472557894, 0.7391091552744211], 'means': [6.533203677868809, 8.75376825217859], 'covars': [4.404551560518473, 0.643075981620061]}"
