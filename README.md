@@ -167,7 +167,6 @@ uv run src/bpi_empirical_analysis.py
 * **Reproducibility artifacts:** exported to `data/output/` (CSV outputs) and `figures/` (PDF/PNG).
 * This project is designed to support open research standards without exposing sensitive institutional data.
 
-**Zenodo Archive DOI:** *[replace with your DOI]*
 
 ---
 
